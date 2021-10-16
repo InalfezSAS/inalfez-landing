@@ -12,13 +12,9 @@
         </div>
 
         <div
-          class="d-lg-grid align-items-center"
-          style="grid-template-columns: 1fr auto"
-        >
-          <ul
-            class="d-flex text-end align mb-0 justify-content-evenly"
-            style="width: 100%"
-          >
+          class="d-none d-lg-grid align-items-center"
+          style="grid-template-columns: 1fr auto">
+          <ul class="d-flex text-end align mb-0 justify-content-evenly" style="width: 100%">
             <li class="nav-item li-nav my-lg-0">
               <a class="" href="">¿Quiénes somos?</a>
             </li>

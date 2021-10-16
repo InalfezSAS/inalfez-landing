@@ -5,16 +5,16 @@
       <Navbar />
 
       <!-- Portada -->
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-6 info">
+      <div class="container inicio">
+        <div class="inicio-container">
+          <div class=" info">
             <h3 class="mb-0">El lugar perfecto para</h3>
             <h2 class="mb-2">LA FAMILIA</h2>
             <button type="button" class="btn btn-primary saber">
               Quiero saber más
             </button>
           </div>
-          <div class="col-6 img-familia">
+          <div class=" img-familia">
             <img
               src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632381164/familia_ao6edf.png"
               alt="Familia"
@@ -74,6 +74,15 @@ html {
   font-size: 62.5%;
 }
 
+.inicio {
+  margin-top: 30px;
+}
+
+.inicio-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .fondo-general {
   background: url("https://res.cloudinary.com/ddegh9xqy/image/upload/v1632982503/fondo_landing_wbmqbx.png");
   width: 100%;
@@ -88,6 +97,7 @@ html {
   color: white;
   justify-content: center;
   padding-bottom: 100px;
+  text-align: start;
 }
 
 .info h3 {
@@ -97,7 +107,7 @@ html {
 
 .info h2 {
   font-size: 80px;
-  font-weight: 800;
+  font-weight: bold;
   text-shadow: 2px 2px 10px rgb(31, 31, 31);
 }
 
@@ -121,6 +131,55 @@ html {
 .img-familia img {
   width: 100%;
   max-width: 425px;
+}
+
+@media (max-width: 992px) {
+  .inicio {
+    margin-top: 60px;
+  }
+
+  .inicio-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fondo-general {
+    height: max-content;
+  }
+
+  .img-familia img {
+    max-width: 300px;
+  }
+
+  .info {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .saber {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .info h3 {
+  font-size: 25px;
+}
+
+.info h2 {
+  font-size: 60px;
+}
+}
+
+@media (max-width: 425px) {
+  .info h3 {
+  font-size: 20px;
+}
+
+.info h2 {
+  font-size: 50px;
+}
 }
 
 </style>
