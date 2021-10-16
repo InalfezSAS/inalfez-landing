@@ -85,7 +85,7 @@ export default {
 .li-nav a:hover {
   color: white !important;
   transform: scale(1.1);
-  font-weight: 700px;
+  font-weight: bold;
 }
 
 .li-nav a:focus {
