@@ -1,8 +1,7 @@
 <template >
-  <div>
-    <div class="container quienes d-none d-lg-block">
-      <div class="row justify-content-center">
-        <div class="col-4" style="width: 300px">
+    <div class="container w-full quienes d-none d-lg-block">
+      <div class="d-flex justify-content-between">
+        <div class=" card-container" style="width: 350px">
           <div class="row row-cols-1">
             <div class="col">
               <img
@@ -23,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4" style="width: 300px">
+        <div class=" card-container" style="width: 350px">
           <div class="row row-cols-1">
             <div class="col">
               <img
@@ -44,7 +43,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4" style="width: 300px">
+        <div class=" card-container" style="width: 350px">
           <div class="row row-cols-1">
             <div class="col">
               <img
@@ -67,7 +66,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 <script>
 export default {
@@ -110,5 +108,11 @@ export default {
     font-size: 14px;
     color: #94C11E;
     font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    width: 300px;
+  }
 }
 </style>

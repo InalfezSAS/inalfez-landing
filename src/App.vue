@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="position-relative d-flex align-items-center flex-column">
+  <div id="app" class=" d-flex align-items-center flex-column">
     <div class="fondo-general">
       <!-- Nav -->
       <Navbar />
@@ -46,6 +46,7 @@ import QuienesSomosSwiper from "./components/QuienesSomosSwiper.vue";
 import QuienesSomos from "./components/QuienesSomos.vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import Proyecto from "./components/Proyecto.vue";
 
 export default {
   name: "App",
@@ -55,6 +56,7 @@ export default {
     QuienesSomos,
     Navbar,
     Footer,
+    Proyecto,
   },
 };
 </script>

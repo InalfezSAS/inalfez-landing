@@ -1,10 +1,9 @@
 <template >
-  <div>
-    <div class="quienesSomos-container d-flex flex-column mb-5 d-lg-none">
+    <div class="quienesSomos-container container w-full d-flex mb-5 d-lg-none">
       <div class="swiper quienesSomos p-0">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="" style="width: 300px">
+            <div class="" style="">
               <div class="row row-cols-1">
                 <div class="col">
                   <img
@@ -28,7 +27,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="" style="width: 300px">
+            <div class="">
               <div class="row row-cols-1">
                 <div class="col">
                   <img
@@ -52,7 +51,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="" style="width: 300px">
+            <div class="">
               <div class="row row-cols-1">
                 <div class="col">
                   <img
@@ -78,7 +77,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 <script>
 export default {
@@ -114,7 +112,8 @@ export default {
     }
     
     .quienesSomos {
-        width: 300px;
+      max-width: 450px;
+        min-width: 300px;
         height: max-content;
     }
     

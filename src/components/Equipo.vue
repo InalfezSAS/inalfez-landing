@@ -1,41 +1,42 @@
 <template>
-  <div class="equipo d-flex flex-column mb-5">
-    <div
-      class="
-        team-title
-        d-flex
-        justify-content-center
-        align-items-center
-        py-5
-        mb-5 mb-md-0
-      "
-    >
-      <p>Nuestro equipo</p>
-    </div>
-    <div class="swiper personal">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="team-card d-flex flex-column">
-            <div class="team-img d-flex justify-content-center">
-              <div></div>
-            </div>
-            <div
-              class="d-flex flex-column align-items-center my-auto"
-              style="height: 100%"
-            >
-              <p style="font-size: 18px">
-                <strong>Gabriel Alferez</strong> - CEO INALFEZ S.A.S
-              </p>
-              <p style="font-size: 14px">
-                “Amo mi trabajo como si fuera mi vida”
-              </p>
+  <div class="equipo d-flex flex-column mb-5 px-5">
+    <div class="container">
+      <div
+        class="
+          team-title
+          d-flex
+          justify-content-center
+          align-items-center
+          py-5
+          mb-5 mb-md-0
+        "
+      >
+        <p>Nuestro equipo</p>
+      </div>
+      <div class="swiper personal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="team-card d-flex flex-column">
+              <div class="team-img d-flex justify-content-center">
+                <div></div>
+              </div>
+              <div
+                class="team-info d-flex flex-column align-items-center"
+              >
+                <p class="team-title" >
+                  <strong>Gabriel Alferez</strong> - CEO INALFEZ S.A.S
+                </p>
+                <p class="frase">
+                  “Amo mi trabajo como si fuera mi vida”
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="d-none d-md-block">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="d-none d-md-block">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -102,16 +103,16 @@ export default {
 }
 
 .swiper {
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   padding: 50px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
 }
 
 .button-container {
@@ -127,15 +128,15 @@ export default {
 
 .team-card {
   width: 100%;
-  height: 300px;
+  height: 100%;
   background-color: white;
   box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
 
 .team-img div {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   position: relative;
   top: -30px;
@@ -145,42 +146,61 @@ export default {
   background-size: cover;
 }
 
+.team-info {
+  height: 100%;
+}
+
+.team-title {
+    font-size: 25px;
+  }
+
+  .frase {
+    font-size: 21px;
+  }
+
+@media (max-width: 1440px) {
+  .swiper {
+    width: 600px;
+    height: 450px;
+  }
+
+  .team-title {
+    font-size: 18px;
+  }
+
+  .frase {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .swiper {
-    width: 450px;
-    height: 350px;
-    padding: 0;
-  }
-
-  .swiper-slide {
     width: 100%;
-    height: 100%;
-  }
-
-  .team-card {
-    height: 100%;
-  }
-
-  /* .team-img div {
-				width: 150px;
-				height: 150px;
-		} */
+    height: 300px;
+  padding: 0;
 }
 
-@media (max-width: 500px) {
+.team-img div {
+  width: 200px;
+  height: 200px;
+}
+
+
+}
+
+@media (max-width: 425px) {
+  .frase {
+    display: none;
+  }
+
   .swiper {
-    width: 320px;
-    height: 250px;
-  }
-
-  .team-img div {
-    width: 100px;
-    height: 100px;
-  }
-
-  .team-img div {
-    width: 150px;
-    height: 150px;
-  }
+    height: 230px;
 }
+
+.team-img div {
+  width: 150px;
+  height: 150px;
+}
+}
+
 </style>
