@@ -1,11 +1,11 @@
 <template >
-  <div class="modal-quienes">
-		<div class="contenedor-quienes ">
+  <div class="modal-vision">
+		<div class="contenedor-vision ">
 			<header class="d-flex justify-content-end mb-4">
-				<label for="modal-quienes" class="btn btn-primary">X</label>
+				<label for="modal-vision" class="btn btn-primary">X</label>
 			</header>
-			<div class="contenido-quienes">
-				<h1>¿Quiénes Somos?</h1>
+			<div class="contenido-vision">
+				<h1>Visión</h1>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt inventore praesentium id maiores quasi aut recusandae quibusdam accusantium quia cum, numquam repellendus labore amet nemo nobis dolor quae voluptatibus?</p>
 			</div>
 		</div>
@@ -17,11 +17,11 @@ export default {
 }
 </script>
 <style >
-#modal-quienes{
+#modal-vision{
 	display: none;
 }
 
-.modal-quienes {
+.modal-vision {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -36,7 +36,7 @@ export default {
 	visibility: hidden;
 }
 
-.contenedor-quienes{
+.contenedor-vision{
 	width: 600px;
 	height: 400px;
 	padding: 20px;
@@ -49,31 +49,31 @@ export default {
 	transform: translateY(-30%);
 }
 
-.contenido-quienes{
+.contenido-vision{
 	width: 100%;
 }
 
-.contenido-quienes h1 {
+.contenido-vision h1 {
     font-weight: 700;
     font-size: 25px;
 		margin-bottom: 20px;
 }
 
-.contenido-quienes p {
+.contenido-vision p {
     font-size: 18px;
 }
 
-#modal-quienes:checked ~ .modal-quienes{
+#modal-vision:checked ~ .modal-vision{
 	opacity: 1;
 	visibility: visible;
 }
 
-#modal-quienes:checked ~ .modal-quienes .contenedor-quienes{
+#modal-vision:checked ~ .modal-vision .contenedor-vision{
 	transform: translateY(0%);
 }
 
 @media (max-width:768px){
-	.contenedor-quienes{
+	.contenedor-vision{
 		width: 95%;
 		height: 95%;
 	}

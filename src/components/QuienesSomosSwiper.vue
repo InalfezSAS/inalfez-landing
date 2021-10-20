@@ -3,29 +3,34 @@
       <div class="swiper quienesSomos p-0">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="" style="">
-              <div class="row row-cols-1">
-                <div class="col">
-                  <img
-                    src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632465595/WhatsApp_Image_2021-08-20_at_11.04.56_AM_1_fwacmf.jpg"
-                    alt=""
-                    class="img-quienes"
-                  />
-                </div>
-                <div class="col text-start">
-                  <h2>¿Quiénes somos?</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Impedit provident corporis delectus perspiciatis,
-                    voluptatibus doloribus cum accusamus earum. Eum rerum,
-                    maxime labore ipsa quibusdam vel quaerat odio perferendis in
-                    ea.
-                  </p>
-                  <span>Ver más...</span>
-                </div>
-              </div>
+            <div>
+              <input type="checkbox" id="modal-quienes">
+              <ModalQuienesSomos />
+              <label for="modal-quienes">
+                  <div class="row row-cols-1">
+                    <div class="col">
+                      <img
+                        src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632465595/WhatsApp_Image_2021-08-20_at_11.04.56_AM_1_fwacmf.jpg"
+                        alt=""
+                        class="img-quienes"
+                      />
+                    </div>
+                    <div class="col text-start">
+                      <h2>¿Quiénes somos?</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Impedit provident corporis delectus perspiciatis,
+                        voluptatibus doloribus cum accusamus earum. Eum rerum,
+                        maxime labore ipsa quibusdam vel quaerat odio perferendis in
+                        ea.
+                      </p>
+                      <span>Ver más...</span>
+                    </div>
+                  </div>
+              </label>
             </div>
           </div>
+
           <div class="swiper-slide">
             <div class="">
               <div class="row row-cols-1">
@@ -50,6 +55,7 @@
               </div>
             </div>
           </div>
+  
           <div class="swiper-slide">
             <div class="">
               <div class="row row-cols-1">
@@ -79,8 +85,16 @@
     </div>
 </template>
 <script>
+
+import ModalQuienesSomos from './Modales/ModalQuienesSomos.vue'
+
 export default {
   name: "Equipo",
+
+  components: {
+    ModalQuienesSomos,
+  },
+
   mounted() {
     const Swiper = window.Swiper;
 
@@ -151,10 +165,12 @@ export default {
         font-weight: 500;
     }
 
-    
 .img-quienes {
     width: 100%;
     border-radius: 20px;
 }
 
+.label-quienes {
+  cursor: pointer;
+}
 </style>

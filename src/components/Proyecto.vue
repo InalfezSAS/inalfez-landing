@@ -2,7 +2,9 @@
   <div class="fondo">
     <div class="container proyecto-container" >
       <div class="info-container">
-        <div></div>
+        <div>
+          <div class="img"></div>
+        </div>
         <div></div>
       </div>
 
@@ -38,6 +40,12 @@ export default {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.img {
+  width: 350px;
+  height: 90%;
+  background-color: brown;
 }
 
 .video-container {
