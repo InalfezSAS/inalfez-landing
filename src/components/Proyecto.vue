@@ -1,6 +1,15 @@
 <template >
   <div class="fondo">
-    <div class="">
+    <div class="container proyecto-container" >
+      <div class="info-container">
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="video-container">
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -16,6 +25,26 @@ export default {
   /* position: absolute; */
   background-image: url("https://res.cloudinary.com/ddegh9xqy/image/upload/v1633466174/fondo_yayuma.svg");
   background-size: cover;
+}
+
+.proyecto-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container {
+  height:50%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.video-container {
+  height:50%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 
