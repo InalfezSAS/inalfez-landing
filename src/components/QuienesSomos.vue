@@ -1,8 +1,6 @@
 <template >
-    <div class="container w-full quienes">
+    <div class="container w-full quienes d-none d-lg-block">
       <div class="d-flex justify-content-between">
-        <input type="checkbox" id="modal-quienes">
-        <ModalQuienesSomos />
 	      <label for="modal-quienes" class="label-quienes">
           <div class=" card-container" style="width: 350px">
             <div class="row row-cols-1">
@@ -28,7 +26,6 @@
         </label>
 
         <input type="checkbox" id="modal-mision">
-        <ModalMision />
         <label for="modal-mision" class="label-quienes">
           <div class=" card-container" style="width: 350px">
             <div class="row row-cols-1">
@@ -53,8 +50,6 @@
           </div>
         </label>
 
-        <input type="checkbox" id="modal-vision">
-        <ModalVision />
         <label for="modal-vision" class="label-quienes">
           <div class=" card-container" style="width: 350px">
             <div class="row row-cols-1">
@@ -83,23 +78,14 @@
 </template>
 <script>
 
-import ModalQuienesSomos from './Modales/ModalQuienesSomos.vue'
-import ModalMision from './Modales/ModalMision.vue'
-import ModalVision from './Modales/ModalVision.vue'
 
 export default {
   name: 'QuienesSomos',
-  components: {
-    ModalQuienesSomos,
-    ModalMision,
-    ModalVision,
-  },
 }
 </script>
 <style scoped>
   .quienes {
     margin-bottom: 80px;
-    visibility: visible;
 }
 
 .quienes .col {
@@ -139,13 +125,6 @@ export default {
 @media (max-width: 1200px) {
   .card-container {
     width: 300px !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .quienes {
-    position: absolute;
-    visibility: hidden;
   }
 }
 </style>
