@@ -1,42 +1,46 @@
 <template>
-  <div id="app" class=" d-flex align-items-center flex-column">
-    <div class="fondo-general">
-      <!-- Nav -->
-      <Navbar />
+  <div id="app" class="body-container">
+    <div class=" d-flex align-items-center flex-column">
+      <div class="fondo-general">
+        <!-- Nav -->
+        <Navbar />
 
-      <!-- Portada -->
-      <div class="container inicio">
-        <div class="inicio-container">
-          <div class=" info">
-            <h3 class="mb-0">El lugar perfecto para</h3>
-            <h2 class="mb-2">LA FAMILIA</h2>
-            <button type="button" class="btn btn-primary saber">
-              Quiero saber más
-            </button>
-          </div>
-          <div class=" img-familia">
-            <img
-              src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632381164/familia_ao6edf.png"
-              alt="Familia"
-              class="familia"
-            />
+        <!-- Portada -->
+        <div class="container inicio">
+          <div class="inicio-container">
+            <div class=" info">
+              <h3 class="mb-0">El lugar perfecto para</h3>
+              <h2 class="mb-2">LA FAMILIA</h2>
+              <button type="button" class="btn btn-primary saber">
+                Quiero saber más
+              </button>
+            </div>
+            <div class=" img-familia">
+              <img
+                src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632381164/familia_ao6edf.png"
+                alt="Familia"
+                class="familia"
+              />
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- ¿Quiénes somos? -->
+      <QuienesSomos />
+      <QuienesSomosSwiper />
+
+      <!-- Proyecto -->
+      <Proyecto />
+
+      <!-- Equipo -->
+      <Equipo />
+
+      <!-- Footer -->
+      <Footer />
     </div>
 
-    <!-- ¿Quiénes somos? -->
-    <QuienesSomos />
-    <QuienesSomosSwiper />
-
-    <!-- Proyecto -->
-    <Proyecto />
-
-    <!-- Equipo -->
-    <Equipo />
-
-    <!-- Footer -->
-    <Footer />
+    <Sidebar />
   </div>
 </template>
 
@@ -47,6 +51,7 @@ import QuienesSomos from "./components/QuienesSomos.vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import Proyecto from "./components/Proyecto.vue";
+import Sidebar from "./components/Sidebar.vue";
 
 export default {
   name: "App",
@@ -57,6 +62,7 @@ export default {
     Navbar,
     Footer,
     Proyecto,
+    Sidebar,
   },
 };
 </script>
@@ -74,6 +80,13 @@ export default {
 
 html {
   font-size: 62.5%;
+}
+
+.body-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .inicio {

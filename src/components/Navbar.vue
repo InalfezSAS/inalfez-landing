@@ -1,43 +1,56 @@
 <template>
   <div>
-    <nav class="navbar container pt-4">
-        <div>
-          <a class="navbar-brand" href="/">
-            <img
-              src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632377670/Logo_Mesa_de_trabajo_1_in9ycy.png"
-              alt="Logo Inalfez"
-              class="logo"
-            />
-          </a>
-        </div>
+    <nav class="navbar container mt-2">
+      <div>
+        <a class="navbar-brand" href="/">
+          <img
+            src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632377670/Logo_Mesa_de_trabajo_1_in9ycy.png"
+            alt="Logo Inalfez"
+            class="logo"
+          />
+        </a>
+      </div>
 
-        <div
-          class="d-none d-lg-grid align-items-center"
-          style="grid-template-columns: 1fr auto">
-          <ul class="d-flex text-end align mb-0 justify-content-evenly" style="width: 100%">
-            <li class="nav-item li-nav my-lg-0">
-              <a class="" href="">¿Quiénes somos?</a>
-            </li>
-            <li class="nav-item li-nav my-lg-0">
-              <a class="" href="">La Reserva</a>
-            </li>
-            <li class="nav-item li-nav my-lg-0">
-              <a class="" href="">Nuestro Equipo</a>
-            </li>
-            <li class="nav-item li-nav my-lg-0">
-              <a class="" href="">Contáctanos</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-primary paga d-none d-lg-block">
-            Paga tu crédito
-          </button>
+      <div
+        class="d-none d-lg-grid align-items-center"
+        style="grid-template-columns: 1fr auto">
+        <ul class="d-flex text-end align mb-0 justify-content-evenly" style="width: 100%">
+          <li class="nav-item li-nav my-lg-0">
+            <a class="" href="">¿Quiénes somos?</a>
+          </li>
+          <li class="nav-item li-nav my-lg-0">
+            <a class="" href="">La Reserva</a>
+          </li>
+          <li class="nav-item li-nav my-lg-0">
+            <a class="" href="">Nuestro Equipo</a>
+          </li>
+          <li class="nav-item li-nav my-lg-0">
+            <a class="" href="">Contáctanos</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-primary paga d-none d-lg-block">
+          Paga tu crédito
+        </button>
+      </div>
+
+      <div class="navbar-sidebar-button d-lg-none">
+        <div>
+          <label for='collapsable' class='button'><Menu /></label>
         </div>
-      </nav>
+      </div>
+    </nav>
   </div>
 </template>
 <script>
+
+import Menu from './icons/Menu.vue'
+
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+
+  components: {
+    Menu,
+  }
 }
 </script>
 <style scoped>
@@ -87,4 +100,24 @@ export default {
 .li-nav a:focus {
   color: white;
 }
+
+.navbar-sidebar-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center ;
+}
+
+.navbar-sidebar-button div {
+  width: max-content;
+  height: max-content;
+}
+
+.button {
+    cursor: pointer;
+    font-weight: 800;
+    color: black;
+    font-size: 40px;
+  }
 </style>
