@@ -1,5 +1,5 @@
 <template>
-  <div class="equipo container d-flex flex-column mb-5 px-5">
+  <div class="equipo container d-flex flex-column mb-5">
     <div class="container">
       <div
         class="
@@ -15,7 +15,7 @@
       </div>
       <div class="swiper personal container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-container">
             <div class="team-card d-flex flex-column">
               <div class="team-img d-flex justify-content-center">
                 <div></div>
@@ -70,6 +70,8 @@ export default {
 .equipo {
   width: 100%;
   height: 1080px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   justify-content: center;
   background-image: url("../assets/fondo-equipo.jpeg");
@@ -87,12 +89,6 @@ export default {
 @media (max-width: 1300px) {
   .equipo {
     height: 768px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .equipo {
-    height: 600px;
   }
 }
 
@@ -168,33 +164,36 @@ export default {
 
 @media (max-width: 768px) {
   .swiper {
-    width: 100%;
+    width: 500px;
     height: 300px;
     padding: 0;
 }
 
-/* .swiper-slide {
-  width: 100%!important;
-  height: 300px!important;
-} */
-
-.team-img div {
-  width: 200px;
-  height: 200px;
-}
-
+  .team-img div {
+    width: 200px;
+    height: 200px;
+  }
 
 }
 
 @media (max-width: 575px) {
-  .swiper-slide {
-  width: 100%!important;
-  height: 100%!important;
+  .swiper {
+    width: 450px;
+}
 }
 
-.swiper-wrapper{
-  width: 100%!important;
-  height: 100%!important;
+@media (max-width: 500px) {
+  .equipo {
+    align-items: center;
+  }
+  .swiper {
+    width: 400px;
+}
+}
+
+@media (max-width: 450px) {
+  .swiper {
+    width: 350px;
 }
 }
 
@@ -204,6 +203,7 @@ export default {
   }
 
   .swiper {
+    width: 300px;
     height: 230px;
 }
 
