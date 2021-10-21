@@ -44,7 +44,7 @@
 
 
 export default {
-  name: "Equipo",
+  name: "QuienesSomosSwiper",
 
   data() {
     return {

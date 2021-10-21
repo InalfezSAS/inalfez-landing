@@ -1,5 +1,5 @@
 <template>
-  <div class="equipo d-flex flex-column mb-5 px-5">
+  <div class="equipo container d-flex flex-column mb-5 px-5">
     <div class="container">
       <div
         class="
@@ -13,7 +13,7 @@
       >
         <p>Nuestro equipo</p>
       </div>
-      <div class="swiper personal">
+      <div class="swiper personal container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="team-card d-flex flex-column">
@@ -108,13 +108,6 @@ export default {
   padding: 50px;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
 .button-container {
   width: 40px;
   height: 40px;
@@ -177,8 +170,13 @@ export default {
   .swiper {
     width: 100%;
     height: 300px;
-  padding: 0;
+    padding: 0;
 }
+
+/* .swiper-slide {
+  width: 100%!important;
+  height: 300px!important;
+} */
 
 .team-img div {
   width: 200px;
@@ -186,6 +184,18 @@ export default {
 }
 
 
+}
+
+@media (max-width: 575px) {
+  .swiper-slide {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.swiper-wrapper{
+  width: 100%!important;
+  height: 100%!important;
+}
 }
 
 @media (max-width: 425px) {
