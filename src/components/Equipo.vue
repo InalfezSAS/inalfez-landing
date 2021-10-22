@@ -104,7 +104,6 @@ export default {
 
 .swiper {
   width: 700px;
-  height: 500px;
   padding: 50px;
 }
 
@@ -148,6 +147,7 @@ export default {
 
 .team-info {
   height: 100%;
+  padding: 5px;
 }
 
 .team-title {
@@ -161,7 +161,6 @@ export default {
 @media (max-width: 1440px) {
   .swiper {
     width: 600px;
-    height: 450px;
   }
 
   .team-title {
@@ -176,7 +175,6 @@ export default {
 @media (max-width: 768px) {
   .swiper {
     width: 100%;
-    height: 300px;
   padding: 0;
 }
 
@@ -189,13 +187,8 @@ export default {
 }
 
 @media (max-width: 425px) {
-  .frase {
-    display: none;
-  }
+  
 
-  .swiper {
-    height: 230px;
-}
 
 .team-img div {
   width: 150px;

@@ -57,7 +57,7 @@ export default {
     Navbar,
     Footer,
     Proyecto,
-  },
+  },  
 };
 </script>
 

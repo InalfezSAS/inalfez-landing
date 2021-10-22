@@ -24,8 +24,6 @@
             </div>
           </div>
         </label>
-
-        <input type="checkbox" id="modal-mision">
         <label for="modal-mision" class="label-quienes">
           <div class=" card-container" style="width: 350px">
             <div class="row row-cols-1">

@@ -3,7 +3,7 @@
     <div class="footer container ">
       <div class="footer-content d-flex flex-column d-lg-grid">
         <div class="map-container">
-          <iframe class="" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d497.34330942085614!2d-73.48698793349547!3d4.269446255431732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1634393137246!5m2!1ses-419!2sco" width="80%" height="100%" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d497.3432358807377!2d-73.48691360460823!3d4.269559738516057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1634872896044!5m2!1ses!2sco" width="80%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="info-container text-center text-lg-end">

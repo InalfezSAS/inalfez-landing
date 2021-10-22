@@ -30,7 +30,7 @@
     <div :class="menu">
 		<div class="contenedor-mision ">
 			<header class="d-flex justify-content-end mb-4">
-				<label for="modal-mision" class="btn btn-primary" @click="abrir">X</label>
+				<label for="modal-mision" class="btn btn-primary-outline" @click="abrir">X</label>
 			</header>
 			<div class="contenido-mision">
 				<h1>Hola</h1>
