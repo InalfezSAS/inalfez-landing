@@ -33,8 +33,15 @@
     <Proyecto />
 
     <!-- Equipo -->
+
+    <Vender/>
+
+
     <Equipo />
 
+    <Simulador/>
+
+    
     <!-- Footer -->
     <Footer />
   </div>
@@ -47,6 +54,8 @@ import QuienesSomos from "./components/QuienesSomos.vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import Proyecto from "./components/Proyecto.vue";
+import Vender from "./components/Vender.vue";
+import Simulador from "./components/Simulador.vue"
 
 export default {
   name: "App",
@@ -57,6 +66,8 @@ export default {
     Navbar,
     Footer,
     Proyecto,
+    Vender,
+    Simulador
   },  
 };
 </script>

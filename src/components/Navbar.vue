@@ -94,6 +94,7 @@ toggleCollapsed() {
   box-shadow: -10px 12px 23px -11px rgba(57, 57, 57, 0.67);
   -webkit-box-shadow: -10px 12px 23px -11px rgba(57, 57, 57, 0.67);
   -moz-box-shadow: -10px 12px 23px -11px rgba(57, 57, 57, 0.67);
+  border-radius: 60px;
 }
 
 .izquierda{
@@ -198,6 +199,12 @@ toggleCollapsed() {
 
 
 @media (max-width:992px){
+
+
+    .paga{
+        border-radius: 5px;
+    }
+
     .nav{
         padding: 20px;
         background-color: white;

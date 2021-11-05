@@ -1,5 +1,5 @@
 <template>
-  <div class="equipo d-flex flex-column mb-5 px-5">
+  <div class="equipo d-flex flex-column px-5">
     <div class="container">
       <div
         class="
@@ -18,7 +18,7 @@
           <div class="swiper-slide">
             <div class="team-card d-flex flex-column">
               <div class="team-img d-flex justify-content-center">
-                <div></div>
+                <img class="foto" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" alt="">
               </div>
               <div
                 class="team-info d-flex flex-column align-items-center"
@@ -69,10 +69,10 @@ export default {
 <style scoped>
 .equipo {
   width: 100%;
+  max-width: 1920px;
   height: 1080px;
-  display: flex;
   justify-content: center;
-  background-image: url("../assets/fondo-equipo.jpeg");
+  background-image: url("https://res.cloudinary.com/ddegh9xqy/image/upload/v1635412131/fondo_equoi_Mesa_de_trabajo_1_dztvfy.png"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -96,11 +96,6 @@ export default {
   }
 }
 
-@media (max-width: 800px) {
-  .equipo {
-    background: none;
-  }
-}
 
 .swiper {
   width: 700px;
@@ -133,16 +128,13 @@ export default {
   border-radius: 20px;
 }
 
-.team-img div {
+.foto {
   width: 250px;
   height: 250px;
-  border-radius: 50%;
+  border-radius: 100%;
   position: relative;
   top: -30px;
-  background-image: url("https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .team-info {
@@ -178,7 +170,7 @@ export default {
   padding: 0;
 }
 
-.team-img div {
+.foto {
   width: 200px;
   height: 200px;
 }
@@ -190,7 +182,7 @@ export default {
   
 
 
-.team-img div {
+.foto  {
   width: 150px;
   height: 150px;
 }
