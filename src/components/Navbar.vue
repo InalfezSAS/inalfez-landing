@@ -42,6 +42,9 @@
         </header>
 </template>
 <script>
+
+import Menu from './icons/Menu.vue'
+
 export default {
   name: 'Navbar',
 data() {
@@ -281,4 +284,24 @@ toggleCollapsed() {
     }
 
 }
+
+.navbar-sidebar-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center ;
+}
+
+.navbar-sidebar-button div {
+  width: max-content;
+  height: max-content;
+}
+
+.button {
+    cursor: pointer;
+    font-weight: 800;
+    color: black;
+    font-size: 40px;
+  }
 </style>

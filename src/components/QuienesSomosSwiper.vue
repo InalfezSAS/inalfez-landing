@@ -53,7 +53,7 @@
 </template>
 <script>
 export default {
-  name: "Equipo",
+  name: "QuienesSomosSwiper",
 
   data() {
     return {

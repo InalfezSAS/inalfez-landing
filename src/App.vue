@@ -23,14 +23,13 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ¿Quiénes somos? -->
-    <QuienesSomos />
-    <QuienesSomosSwiper />
+      <!-- ¿Quiénes somos? -->
+      <QuienesSomos />
+      <QuienesSomosSwiper />
 
-    <!-- Proyecto -->
-    <Proyecto />
+      <!-- Proyecto -->
+      <Proyecto />
 
     <!-- Equipo -->
 
@@ -106,6 +105,13 @@ export default {
 
 html {
   font-size: 62.5%;
+}
+
+.body-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .inicio {

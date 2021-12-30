@@ -1,7 +1,7 @@
 <template >
     <div class="container w-full quienes d-none d-lg-block" id="quienes-somos">
       <div class="d-flex justify-content-between">
-	      <label for="modal-quienes" class="label-quienes">
+	      <div class="label-quienes">
           <div class=" card-container" style="width: 350px">
             <div class="row row-cols-1">
               <div class="col">
@@ -46,9 +46,9 @@
               </div>
             </div>
           </div>
-        </label>
+        </div>
 
-        <label for="modal-vision" class="label-quienes">
+        <div class="label-quienes">
           <div class=" card-container" style="width: 350px">
             <div class="row row-cols-1">
               <div class="col">
@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-        </label>
+        </div>
       </div>
     </div>
 </template>

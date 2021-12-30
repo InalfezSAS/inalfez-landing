@@ -13,9 +13,9 @@
       >
         <p>Nuestro equipo</p>
       </div>
-      <div class="swiper personal">
+      <div class="swiper personal container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-container">
             <div class="team-card d-flex flex-column">
               <div class="team-img d-flex justify-content-center">
                 <img class="foto" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" alt="">
@@ -66,6 +66,8 @@ export default {
   },
 };
 </script>
+
+
 <style scoped>
 .equipo {
   width: 100%;
@@ -100,13 +102,6 @@ export default {
 .swiper {
   width: 700px;
   padding: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .button-container {
@@ -175,12 +170,23 @@ export default {
   height: 200px;
 }
 
+@media (max-width: 500px) {
+  .equipo {
+    align-items: center;
+  }
+  .swiper {
+    width: 400px;
+}
+}
 
+@media (max-width: 450px) {
+  .swiper {
+    width: 350px;
+}
 }
 
 @media (max-width: 425px) {
   
-
 
 .foto  {
   width: 150px;
