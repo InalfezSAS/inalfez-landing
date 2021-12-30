@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="simulador">
         <h2 class="titulo">¡Simula tu reserva!</h2>
         <div class="row p-5">
             <div class="col-6 d-flex  flex-column padding">
@@ -32,8 +32,8 @@
                 <button @click="simular" type="button" class="btn btn-primary mt-5">Simular</button>
                 </div>
             </div>
-            <div class="col-6 d-flex tabla">
-                
+            <div class="col-6 d-flex tabla padding">
+                <h1>Hola mundo</h1>
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@ export default {
                     lote:'Residencial urbano',
                     valor:45000000,
                     metros:105.8
-                }
+                } 
             ],
             numMeses:[
                 {

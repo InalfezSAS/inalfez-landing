@@ -1,5 +1,5 @@
 <template >
-  <div class="fondo pt-5">
+  <div class="fondo pt-5" id="la-reserva">
     <div class="container proyecto-container pt-5" >
       <div class="info-container row pt-5 flex-column flex-lg-row">
           <div class="col-xl-4 col-5 container-img">

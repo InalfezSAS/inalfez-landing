@@ -1,5 +1,5 @@
 <template >
-  <div class="quienesSomos-container container w-full d-flex mb-5 d-lg-none">
+  <div class="quienesSomos-container container w-full d-flex mb-5 d-lg-none" id="quienes-somos">
     <div class="swiper quienesSomos p-0">
       <div class="swiper-wrapper">
         <div

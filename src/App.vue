@@ -10,9 +10,9 @@
           <div class=" info">
             <h3 class="mb-0">El lugar perfecto para</h3>
             <h2 class="mb-2">LA FAMILIA</h2>
-            <button type="button" class="btn btn-primary saber">
+            <a href="#simulador" class="btn btn-primary saber">
               Quiero saber más
-            </button>
+            </a>
           </div>
           <div class=" img-familia">
             <img
@@ -44,6 +44,27 @@
     
     <!-- Footer -->
     <Footer />
+    <a href="#head" class="btn-flotante" style="display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    background-color: #70C217;
+    padding:12px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="
+        width: 20px;"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" /></svg>
+    </a>
   </div>
 </template>
 

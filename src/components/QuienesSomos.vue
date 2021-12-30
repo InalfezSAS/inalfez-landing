@@ -1,5 +1,5 @@
 <template >
-    <div class="container w-full quienes d-none d-lg-block">
+    <div class="container w-full quienes d-none d-lg-block" id="quienes-somos">
       <div class="d-flex justify-content-between">
 	      <label for="modal-quienes" class="label-quienes">
           <div class=" card-container" style="width: 350px">

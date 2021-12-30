@@ -15,21 +15,21 @@
                     </svg>
                 </div>
 
-                <a href="#inicio" v-on:click="toggleCollapsed">
+                <a href="#quienes-somos" v-on:click="toggleCollapsed">
                     <li>¿Quiénes somos?</li>
                 </a>
-                <a href="#quienes" v-on:click="toggleCollapsed">
+                <a href="#la-reserva" v-on:click="toggleCollapsed">
                     <li>La Reserva</li>
                 </a>
-                <a href="#expor" v-on:click="toggleCollapsed">
-                    <li>Galeria</li>
+                <a href="#simulador" v-on:click="toggleCollapsed">
+                    <li>Simulador</li>
                 </a>
                 <a href="#certifi" v-on:click="toggleCollapsed">
                     <li>Contáctanos</li>
                 </a>
-                <button type="button" class="btn btn-primary paga">
+                <!-- <button type="button" class="btn btn-primary paga">
           Paga tu crédito
-        </button>
+        </button> -->
             </ul>
             <div class="menu__movil d-block d-lg-none" v-on:click="toggleCollapsed">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
