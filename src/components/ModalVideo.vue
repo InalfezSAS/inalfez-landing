@@ -25,8 +25,15 @@ export default {
 
 @media screen and (max-width: 550px) {
   .video{
-    width: 315px;
+    width: 360px;
     height: 220px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .video{
+    width: 300px;
+    height: 175px;
   }
 }
 </style>
