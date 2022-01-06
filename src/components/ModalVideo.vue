@@ -1,6 +1,6 @@
 <template>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/EOkCOYrPEsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div >
+        <iframe class="video" width="896" height="506" src="https://www.youtube.com/embed/EOkCOYrPEsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </template>
 <script>
@@ -9,5 +9,24 @@ export default {
 }
 </script>
 <style scoped>
-    
+    @media screen and (max-width: 1080px) {
+  .video{
+    width: 560px;
+    height: 315px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .video{
+    width: 460px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .video{
+    width: 360px;
+    height: 220px;
+  }
+}
 </style>
