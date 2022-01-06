@@ -6,22 +6,22 @@
           v-for="item in items"
           :key="item.id"
           class="swiper-slide"
-          @click="abrir"
+          @click="toggleModalS(item.title, item.text)"
         >
           <div>
             <div>
               <div class="row row-cols-1">
                 <div class="col">
                   <img
-                    src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1632465595/WhatsApp_Image_2021-08-20_at_11.04.56_AM_1_fwacmf.jpg"
+                    :src="item.image"
                     alt=""
                     class="img-quienes"
                   />
                 </div>
                 <div class="col text-start">
-                  <h2>{{ item.titulo }}</h2>
+                  <h2>{{ item.title }}</h2>
                   <p>
-                    {{ item.parrafo }}
+                    {{ item.text }}
                   </p>
                   <span>Ver más...</span>
                 </div>
@@ -32,20 +32,17 @@
       </div>
     </div>
   </div>
-  <div :class="menu">
-    <div class="contenedor-mision">
-      <header class="d-flex justify-content-end mb-4">
-        <label for="modal-mision" class="btn btn-primary-outline" @click="abrir"
+  <div class="ventana" v-if="statusModal">
+    <div class="tarjetica">
+      <header class="d-flex justify-content-end">
+        <label for="modal-mision" class="btn btn-primary-outline" @click="toggleModalS"
           >X</label
         >
       </header>
       <div class="contenido-mision">
-        <h1>Hola</h1>
+        <h1>{{currentTitle}}</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-          nesciunt inventore praesentium id maiores quasi aut recusandae
-          quibusdam accusantium quia cum, numquam repellendus labore amet nemo
-          nobis dolor quae voluptatibus?
+          {{currentText}}
         </p>
       </div>
     </div>
@@ -57,29 +54,43 @@ export default {
 
   data() {
     return {
-      modal: false,
+      statusModal: false,
+      currentTitle: "",
+      currentText: "",
       items: [
         {
           id: 0,
-          titulo: "¿Quienes somos?",
-          parrafo:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          title: "¿Quienes somos?",
+          image:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1632465595/WhatsApp_Image_2021-08-20_at_11.04.56_AM_1_fwacmf.jpg",
+          text:
+            "hola mundo",
         },
         {
           id: 1,
-          titulo: "Misión",
-          parrafo:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          title: "Misión",
+          image:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1632465595/WhatsApp_Image_2021-08-20_at_11.04.56_AM_1_fwacmf.jpg",
+          text:
+            "Tio maluco",
         },
         {
           id: 2,
-          titulo: "Visión",
-          parrafo:
+          title: "Visión",
+          image:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1632465595/WhatsApp_Image_2021-08-20_at_11.04.56_AM_1_fwacmf.jpg",
+          text:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         },
       ],
     };
   },
+
+  methods:{
+    toggleModalS(title, text){
+      this.statusModal = !this.statusModal
+      this.currentTitle = title
+      this.currentText = text
+    }
+  },
+
 
   mounted() {
     const Swiper = window.Swiper;
@@ -103,13 +114,6 @@ export default {
     });
   },
 
-  methods: {
-    abrir() {
-      this.modal = !this.modal;
-      console.log("hola mundo");
-    },
-  },
-
   computed: {
     menu() {
       if (this.modal) {
@@ -121,6 +125,34 @@ export default {
 };
 </script>
 <style scoped>
+
+.ventana {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.432);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ventana label{
+  padding: 0;
+  margin-bottom: 1px !important;
+}
+
+.tarjetica{
+  padding: 25px;
+  border-radius: 25px;
+  background: white;
+  width: 85%;
+  height: max-content;
+}
+
+
 .quienesSomos-container {
   width: 100%;
   height: max-content;
