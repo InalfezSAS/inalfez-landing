@@ -24,7 +24,7 @@
                 <a href="#simulador" v-on:click="toggleCollapsed">
                     <li>Simulador</li>
                 </a>
-                <a href="#certifi" v-on:click="toggleCollapsed">
+                <a href="#contacto" v-on:click="toggleCollapsed">
                     <li>Contáctanos</li>
                 </a>
                 <!-- <button type="button" class="btn btn-primary paga">

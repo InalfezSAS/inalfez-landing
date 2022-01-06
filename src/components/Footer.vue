@@ -1,5 +1,5 @@
 <template >
-  <div class="fondo mt-5">
+  <div class="fondo mt-5" id="contacto"> 
     <div class="footer container ">
       <div class="footer-content d-flex flex-column d-lg-grid">
         <div class="map-container">

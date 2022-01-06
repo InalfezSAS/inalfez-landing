@@ -10,7 +10,7 @@
           <div class=" info">
             <h3 class="mb-0">El lugar perfecto para</h3>
             <h2 class="mb-2">LA FAMILIA</h2>
-            <a href="#simulador" class="btn btn-primary saber">
+            <a href="#la-reserva" class="btn btn-primary saber">
               Quiero saber más
             </a>
           </div>

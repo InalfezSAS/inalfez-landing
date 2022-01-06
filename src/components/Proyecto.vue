@@ -1,35 +1,53 @@
 <template >
-  <div class="fondo pt-5" id="la-reserva">
-    <div class="container proyecto-container pt-5" >
-      <div class="info-container row pt-5 flex-column flex-lg-row">
-          <div class="col-xl-4 col-5 container-img">
-            <img src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1634895053/WhatsApp_Image_2021-06-08_at_9.35.07_AM_7_toutii.jpg" alt="" class="imagen">
+  <div class="fondo pt-5 pb-5 pb-lg-0" id="la-reserva">
+    <div class="container proyecto-container pt-lg-5" >
+
+      <div class="info-container row pt-lg-5 flex-column flex-lg-row ">
+          <div class="col-xl-4 col-lg-5 col-auto container-img">
+            <img src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1641503144/33_v1kezy.jpg" alt="" class="imagen">
           </div>
-          <div class="col-5 d-flex flex-column p-3 text-start">
+          <div class="col-lg-5 col-12 d-flex flex-column p-3 text-center text-lg-start">
             <h2 class="titulo">{{textos[0].titulo}}</h2>
             <p class=" texto">{{textos[0].parrafo}}</p>
-            <button type="button" class="btn galeria ">Ver galería</button>
+            <button type="button" class="btn galeria " @click="toggleGalery">Ver galería</button>
           </div>
       </div>
 
       <div class="video-container row justify-content-end flex-column flex-lg-row">
-          <div class="col-5 align-items-end d-flex flex-column p-3 text-end">
+          <div class="col-lg-5 col-auto align-items-lg-end align-items-center d-flex flex-column p-3 text-lg-end text-center order-2 order-lg-1">
             <h2 class="titulo">{{textos[0].titulo}}</h2>
             <p class=" texto">{{textos[0].parrafo}}</p>
-            <button type="button" class="btn galeria ">Ver video</button>
+            <div class="v">
+              <button type="button" class="btn galeria " @click="toggleVideo">Ver video</button>
+            </div>
+            
           </div>
-          <div class="col-xl-4  col-5 container-img">
-            <img src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1634895053/WhatsApp_Image_2021-06-08_at_9.35.07_AM_7_toutii.jpg" alt="" class="imagen">
+          <div class="col-xl-4  col-lg-5 col-auto  container-img order-1 order-lg-2">
+            <img src="https://res.cloudinary.com/ddegh9xqy/image/upload/v1641503128/57_ssfknb.jpg" alt="" class="imagen">
           </div>
       </div>
+    </div>
+    <div class="galery" v-if="galery">
+      <Servicios :toggle="galery" @toggleClose="toggleClose"/>
+    </div>
+    <div class="galery" v-if="video" @click="toggleVideo">
+      <ModalVideo />
     </div>
   </div>
 </template>
 <script>
+import Servicios from '@/components/Servicios.vue'
+import ModalVideo from '@/components/ModalVideo.vue'
 export default {
   name: 'Proyecto',
+  components:{
+    Servicios,
+    ModalVideo
+  },
   data() {
     return {
+      galery:false,
+      video:false,
       fondo:"",
       textos:[
         {
@@ -43,14 +61,41 @@ export default {
       ]
     }
   },
+
+  methods:{
+    toggleGalery(){
+      this.galery = !this.galery
+    },
+    toggleVideo(){
+      this.video = !this.video
+    },
+    toggleClose(status){
+      this.galery = status
+    }
+  }
 }
 </script>
 <style scoped>
+
+
+
+.galery{
+   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.671);
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
   .fondo {
   width: 100%;
   height: auto;
   background: #0d6efd;
-  background-size: cover;
 }
 
 .info-container{
@@ -59,8 +104,8 @@ export default {
 
 .video-container{
   padding-right: 100px;
-      position: relative;
-    top: -100px;
+  position: relative;
+  top: -100px;
 }
 
 .container-img{
@@ -104,7 +149,7 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: -200px;
+  margin-bottom: -200px !important;
 }
 
 @media (max-width:1400px) {
@@ -121,8 +166,21 @@ export default {
   }
 }
 
-@media (max-width:1200px) {
-  
+@media (max-width:992px) {
+  .imagen{
+  top: 0px;
+}
+.video-container{
+  top: 0px;
+}
+
+.proyecto-container {
+  margin-bottom: 0 !important;
+}
+
+.v{
+  width: 100%;
+}
 }
 
 </style>
