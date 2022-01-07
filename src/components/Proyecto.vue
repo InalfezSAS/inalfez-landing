@@ -15,8 +15,8 @@
 
       <div class="video-container row justify-content-end flex-column flex-lg-row">
           <div class="col-lg-5 col-auto align-items-lg-end align-items-center d-flex flex-column p-3 text-lg-end text-center order-2 order-lg-1">
-            <h2 class="titulo">{{textos[0].titulo}}</h2>
-            <p class=" texto">{{textos[0].parrafo}}</p>
+            <h2 class="titulo">{{textos[1].titulo}}</h2>
+            <p class=" texto">{{textos[1].parrafo}}</p>
             <div class="v">
               <button type="button" class="btn galeria " @click="toggleVideo">Ver video</button>
             </div>
@@ -51,12 +51,13 @@ export default {
       fondo:"",
       textos:[
         {
-          titulo:"Soy el titulo",
-          parrafo:"The holaaaaaaa chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+          id:0,
+          titulo:"Nuestro proyecto",
+          parrafo:"INALFEZ S.A.S tiene el gusto de presentarles la URBANIZACIÓN LA RESERVA, ubicada en la zona urbana de Cumaral - Meta y a tan solo cuatro (4) cuadras del parque central. Consiste en 19.5 hectáreas, la cual se compone de 812 lotes distribuidos en 33 manzanas para que construya la casa de sus sueños; esta cuenta con varias zonas verdes deportivas y recreativas ubicadas dentro de la urbanización y con amplias zonas de paisajismo y arborización."
         },
-        {
-          titulo:"Soy el titulo2",
-          parrafo:"222The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+        {id:1,
+          titulo:"Urbanización la Reserva",
+          parrafo:"Los lotes cuentan con gran variedad de medidas y valores. La urbanización está dividida en dos (2) zonas: El área comercial y el área residencial todos diseñados para 2 pisos más altillo con terreno acto para 3 pisos. Los lotes se entregan con escrituras públicas e individuales y disponibilidad de servicios públicos (agua, alcantarillado y energía)."
         },
       ]
     }

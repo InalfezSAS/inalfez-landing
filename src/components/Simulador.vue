@@ -36,27 +36,27 @@
                 <div class="informacion">
                     <div class="item">
                         <h5>Lote de interes</h5>
-                        <p>Semicomercial</p>
+                        <p>{{viewLote}}</p>
                     </div>
                     <div class="item">
                         <h5>Metro cuadrados</h5>
-                        <p>150.5</p>
+                        <p>{{objectLote.metros}}</p>
                     </div>
                     <div class="item">
                         <h5>Valor del lote</h5>
-                        <p>$130.000.000</p>
+                        <p>{{objectLote.valor}}</p>
                     </div>
                     <div class="item">
                         <h5>Meses a financiar</h5>
-                        <p>36</p>
+                        <p>{{currentMes}}</p>
                     </div>
                     <div class="item">
                         <h5>Cuota inicial</h5>
-                        <p>$30.000.000</p>
+                        <p>{{currentInicial}}</p>
                     </div>
                     <div class="item">
                         <h5>Cuota mensual</h5>
-                        <p>$ 2.000.000</p>
+                        <p>{{currentCuota}}</p>
                     </div>
                     <div class="item">
                         <h5>Interes</h5>
@@ -77,7 +77,6 @@ export default {
             meses: '',
             quiero:false,
             cuota:null,
-            valor:0,
             valorLote:0,
             reserva: '',
             mensaje:false,
@@ -158,10 +157,14 @@ export default {
                 }
             ],
             currentLote:"",
-            currentM2: "--",
-            currentPrecio:"--",
-            resultLote:"--",
-
+            viewLote:"--",
+            currentMes:"--",
+            currentInicial:"--",
+            currentCuota:"--",
+            objectLote:{
+                valor:"--",
+                metros:"--"
+            }
 
         }
     },
@@ -169,10 +172,18 @@ export default {
     methods:{
 
         simular(){
+            this.viewLote = this.currentLote.length ? this.currentLote : this.viewtLote;
+            this.objectLote = this.lotes.find(element => {
+                return  this.viewLote == element.lote
+            })
             this.quiero = true
+            this.currentMes = this.meses
+            this.currentInicial = this.cuota
             this.resultLote = this.currentLote
-            this.valor = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.cuota)
-            console.log(this.valor)
+            this.currentCuota = (parseInt(this.objectLote.valor) - parseInt(this.currentInicial)) / parseInt(this.currentMes)
+            this.objectLote.valor = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.objectLote.valor) 
+            this.currentInicial = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.currentInicial) 
+            this.currentCuota = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.currentCuota) 
         },
 
         //  saveInfo(metros, valor){
@@ -182,14 +193,6 @@ export default {
         // } 
 
     },
-
-
-    computed:{
-
-        viewLote(){
-            return this.currentLote.length  ? this.currentLote : this.resultLote
-        },
-    }
 
 }
 </script>
@@ -313,6 +316,7 @@ export default {
         }
 
         .tabla{
+            margin-top: 20px;
             width: 100%;
             padding: 25px 30px !important;
         }
