@@ -3,9 +3,9 @@
         <h2 class="titulo">¡Simula tu reserva!</h2>
         <div class="row p-5">
             <div class="col-lg-6 col-auto d-flex  flex-column padding formu">
-                <input class="input" placeholder="Nombre completo" required>
-                <input class="input" type="email" placeholder="Correo electronico" required>
-                <input class="input" type="tel"  id="tel" name="tel" placeholder="Número de WhatsApp" required>
+                <input v-model="nombre" class="input" placeholder="Nombre completo" required>
+                <input v-model="correo" class="input" type="email" placeholder="Correo electronico" required>
+                <input v-model="numero" class="input" type="tel"  id="tel" name="tel" placeholder="Número de WhatsApp" required>
 
                 <select  v-model="currentLote"  class="form-select input" placeholder="Lote de interés">
                     <option disabled selected value="">Lote de interés</option>
@@ -62,7 +62,7 @@
                         <h5>Interes</h5>
                         <p>0 %</p>
                     </div>
-                    <a v-if="quiero" class="item ya mt-4">Quiero mi lote YA</a>
+                    <a :href="completo" target="_blank" v-if="quiero" class="item ya mt-4">Quiero mi lote YA</a>
                 </div>
             </div>
         </div>
@@ -74,6 +74,9 @@ export default {
     name: 'Simulador',
     data() {
         return {
+            nombre:"",
+            correo:"",
+            numero: null,
             meses: '',
             quiero:false,
             cuota:null,
@@ -154,7 +157,91 @@ export default {
                 {
                     id:2,
                     mes:3
-                }
+                },
+                {
+                    id:3,
+                    mes:4
+                },
+                {
+                    id:4,
+                    mes:5
+                },
+                {
+                    id:5,
+                    mes:6
+                },
+                {
+                    id:6,
+                    mes:7
+                },
+                {
+                    id:7,
+                    mes:8
+                },
+                {
+                    id:8,
+                    mes:9
+                },
+                {
+                    id:9,
+                    mes:10
+                },
+                {
+                    id:10,
+                    mes:11
+                },
+                {
+                    id:11,
+                    mes:12
+                },
+                {
+                    id:12,
+                    mes:13
+                },
+                {
+                    id:13,
+                    mes:14
+                },
+                {
+                    id:14,
+                    mes:15
+                },
+                {
+                    id:15,
+                    mes:16
+                },
+                {
+                    id:16,
+                    mes:17
+                },
+                {
+                    id:17,
+                    mes:18
+                },
+                {
+                    id:18,
+                    mes:19
+                },
+                {
+                    id:19,
+                    mes:20
+                },
+                {
+                    id:20,
+                    mes:21
+                },
+                {
+                    id:21,
+                    mes:22
+                },
+                {
+                    id:22,
+                    mes:23
+                },
+                {
+                    id:23,
+                    mes:24
+                },
             ],
             currentLote:"",
             viewLote:"--",
@@ -193,6 +280,12 @@ export default {
         // } 
 
     },
+
+    computed:{
+        completo(){
+            return "https://wa.me/573214661647/?text=Hola mi nombre es " + this.nombre + ". Estoy interesado/a en un lote tipo " + this.viewLote + ", cuyo valor es" + this.objectLote.valor + ", mi aporte como cuota inicial es de" + this.currentInicial + ", para financiar a  " + this.currentMes + " meses, para contactarme mi correo es " + this.correo + " y mi numero de contacto o whatsApp es " + this.numero
+        }
+    }
 
 }
 </script>
