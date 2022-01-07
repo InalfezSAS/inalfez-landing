@@ -9,21 +9,21 @@
         <div class="info-container text-center text-lg-end">
           <div class="mb-5">
             <h1 class="fw-bold text-white mb-3">Dirección</h1>
-            <p class="text-white mb-0">Carrera x #x - x</p>
-            <p class="text-white">Cumaral,Meta - Colombia</p>
+            <p class="text-white mb-0">Calle 12 # 18-91</p>
+            <p class="text-white">Centro EDS Terpel del centro de Cumaral</p>
           </div>
           <div class="mb-5">
             <h1 class="fw-bold text-white mb-3">Teléfono</h1>
-            <p class="text-white mb-0">Atención al cliente: +57 123456789</p>
-            <p class="text-white">Teléfono: 123456789</p>
+            <p class="text-white mb-0">Atención al cliente: +57 318 835 31 11</p>
+            <p class="text-white">Oficina: +57 314 365 22 43</p>
           </div>
           <div class="mb-5">
             <h1 class="fw-bold text-white mb-3">Correo Electrónico</h1>
-            <p class="text-white">contacto@inalfez.com</p>
+            <p class="text-white">inalfezsas@gmail.com </p>
           </div>
           <div class="d-flex flex-column align-items-center flex-lg-row justify-content-lg-end">
-            <button class="boton btn btn-light mb-5 mb-lg-0">Escribenos</button>
-            <button class="boton btn btn-light ms-lg-5">Escribenos</button>
+            <a href="https://wa.link/p8kn4q" target="_blank" class="boton btn btn-light mb-5 mb-lg-0">Ventas</a>
+            <a href="https://wa.link/gg36br" target="_blank" class="boton btn btn-light ms-lg-5">Oficina</a>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <img src="https://res.cloudinary.com/msolutionstech/image/upload/v1626917763/LOGO_BLANCO-02_pori1c.png" alt="logo">
         </div>
         <div class="d-flex align-items-center justify-content-center">
-          <p class="text-white mb-4 mb-lg-0" style="font-size: 12px;">COPYRIGHT INVERSIONES ALFEREZ SAS 2021 - TERMS & CONDITIONS  PRIVACY POLICY</p>
+          <p class="text-white mb-4 mb-lg-0" style="font-size: 12px;">COPYRIGHT INVERSIONES ALFEREZ SAS 2022 - TERMS & CONDITIONS  PRIVACY POLICY</p>
         </div>
         <div class="d-flex justify-content-center">
           <img class="d-lg-none me-4" src="https://res.cloudinary.com/msolutionstech/image/upload/v1626917763/LOGO_BLANCO-02_pori1c.png" alt="logo">

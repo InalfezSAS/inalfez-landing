@@ -2,22 +2,22 @@
     <div class="container" id="simulador">
         <h2 class="titulo">¡Simula tu reserva!</h2>
         <div class="row p-5">
-            <div class="col-6 d-flex  flex-column padding">
-                <input class="input" placeholder="Ingresa tu nombre completo" required>
-                <input class="input" type="email" placeholder="Ingresa tu correo electronico" required>
-                <input class="input" type="tel"  id="tel" name="tel" placeholder="Ingresa tu número de WhatsApp" required>
+            <div class="col-lg-6 col-auto d-flex  flex-column padding formu">
+                <input class="input" placeholder="Nombre completo" required>
+                <input class="input" type="email" placeholder="Correo electronico" required>
+                <input class="input" type="tel"  id="tel" name="tel" placeholder="Número de WhatsApp" required>
 
-                <select  class="form-select input">
-                    <option disabled selected value="">Selecciona el el lote de interés</option>
+                <select  v-model="currentLote"  class="form-select input" placeholder="Lote de interés">
+                    <option disabled selected value="">Lote de interés</option>
                     <option v-for="item in lotes" :key="item.id">{{item.lote}}</option>
                 </select>
 
                 <select  v-model="meses" class="form-select input" placeholder="Meses a financiar">
-                    <option disabled selected value="">Selecciona los meses a financiar</option>
+                    <option disabled selected value="">Meses a financiar</option>
                     <option v-for="item in numMeses" :key="item.id">{{item.mes}}</option>
                 </select>
                 <select v-model="reserva" class="form-select input">
-                    <option disabled selected value="">Selecciona el tipo de reserva</option>
+                    <option disabled selected value="">Tipo de reserva</option>
                     <option value="true">Con cuota inicial</option>
                     <option value="false">Sin cuota inicial</option>
                 </select>
@@ -32,8 +32,38 @@
                 <button @click="simular" type="button" class="btn btn-primary mt-5">Simular</button>
                 </div>
             </div>
-            <div class="col-6 d-flex tabla padding">
-                <h1>Hola mundo</h1>
+            <div class="col-lg-6 col-auto d-flex flex-column align-items-start tabla padding">
+                <div class="informacion">
+                    <div class="item">
+                        <h5>Lote de interes</h5>
+                        <p>Semicomercial</p>
+                    </div>
+                    <div class="item">
+                        <h5>Metro cuadrados</h5>
+                        <p>150.5</p>
+                    </div>
+                    <div class="item">
+                        <h5>Valor del lote</h5>
+                        <p>$130.000.000</p>
+                    </div>
+                    <div class="item">
+                        <h5>Meses a financiar</h5>
+                        <p>36</p>
+                    </div>
+                    <div class="item">
+                        <h5>Cuota inicial</h5>
+                        <p>$30.000.000</p>
+                    </div>
+                    <div class="item">
+                        <h5>Cuota mensual</h5>
+                        <p>$ 2.000.000</p>
+                    </div>
+                    <div class="item">
+                        <h5>Interes</h5>
+                        <p>0 %</p>
+                    </div>
+                    <a v-if="quiero" class="item ya mt-4">Quiero mi lote YA</a>
+                </div>
             </div>
         </div>
     </div>
@@ -45,35 +75,73 @@ export default {
     data() {
         return {
             meses: '',
+            quiero:false,
             cuota:null,
             valor:0,
             valorLote:0,
             reserva: '',
+            mensaje:false,
             lotes:[
                 {
                     id:0,
-                    lote:'Residencial esquinero',
-                    valor:45000000,
-                    metros:105.5,
+                    lote:'Semicomercial',
+                    valor:38000000,
+                    metros:101.5,
                 },
                 {
                     id:1,
-                    lote:'Residencial ',
-                    valor:45000000,
-                    metros:105.6
+                    lote:'Residenciales',
+                    valor:40000000,
+                    metros:102
                 },
                 {
                     id:2,
-                    lote:'Semicomercial esquinero',
-                    valor:45000000,
-                    metros:105.7
+                    lote:'Comercial',
+                    valor:42000000,
+                    metros:101.5
                 },
                 { 
                     id:3,
-                    lote:'Residencial urbano',
+                    lote:'Residencial esquinero',
                     valor:45000000,
-                    metros:105.8
-                } 
+                    metros:112
+                },
+                { 
+                    id:4,
+                    lote:'Semicomercial esquinero',
+                    valor:45000000,
+                    metros:101.5
+                },
+                { 
+                    id:5,
+                    lote:'Comercial esquinero',
+                    valor:47000000,
+                    metros:101.5
+                },
+                { 
+                    id:6,
+                    lote:'Semicomercial #2 mz 3',
+                    valor:55000000,
+                    metros:118.76
+                },
+                { 
+                    id:7,
+                    lote:'Semicomercial esquinero B',
+                    valor:87000000,
+                    metros:216.36
+                },
+                { 
+                    id:8,
+                    lote:'Residencial B',
+                    valor:126000000,
+                    metros:313.18
+                },
+                { 
+                    id:9,
+                    lote:'Residencial esquinero B',
+                    valor:130000000,
+                    metros:313.18
+                },
             ],
             numMeses:[
                 {
@@ -88,26 +156,88 @@ export default {
                     id:2,
                     mes:3
                 }
-            ]
+            ],
+            currentLote:"",
+            currentM2: "--",
+            currentPrecio:"--",
+            resultLote:"--",
+
+
         }
     },
 
     methods:{
-        hola(){
-            this.reserva = !this.reserva
-            console.log(this.reserva)
-        },
 
         simular(){
-            console.log(this.meses)
+            this.quiero = true
+            this.resultLote = this.currentLote
             this.valor = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.cuota)
             console.log(this.valor)
         },
+
+        //  saveInfo(metros, valor){
+        //     /* this.currentM2 = metros
+        //     this.currentPrecio = valor */
+        //     console.log(metros, valor)
+        // } 
+
+    },
+
+
+    computed:{
+
+        viewLote(){
+            return this.currentLote.length  ? this.currentLote : this.resultLote
+        },
     }
+
 }
 </script>
 
 <style scope>
+
+.ya{
+    background: #70C217;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: -10px 12px 23px -11px rgb(57 57 57 / 67%);
+    -webkit-box-shadow: -10px 12px 23px -11px rgb(57 57 57 / 67%);
+    -moz-box-shadow: -10px 12px 23px -11px rgba(57, 57, 57, 0.67);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.ya:hover{
+    color: white;
+    transform: scale(1.01);
+}
+
+.informacion{
+    width: 100%;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.item p{
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.item h5{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
 
 .sel{
     padding: 0 40px ;
@@ -117,6 +247,9 @@ export default {
     font-size: 16px;
     padding: 5px 60px;
     border-radius: 50px;
+    box-shadow: -10px 12px 23px -11px rgb(57 57 57 / 67%);
+    -webkit-box-shadow: -10px 12px 23px -11px rgb(57 57 57 / 67%);
+    -moz-box-shadow: -10px 12px 23px -11px rgba(57, 57, 57, 0.67);
 }
 
     .sel input{
@@ -145,10 +278,14 @@ export default {
         border-radius: 25px;
         background: #ffffff;
         box-shadow:  7px 7px 16px #cecece,-7px -7px 16px #f2f2f2;
+        display: flex;
+        justify-content: center;
     }
 
+
+
     .padding{
-        padding: 25px 60px;
+        padding: 25px 50px;
     }
 
     .input{
@@ -168,5 +305,26 @@ export default {
 
     .input:focus{
         box-shadow: none;
+    }
+
+    @media (max-width:992px) {
+        .input{
+            padding: 5px;
+        }
+
+        .tabla{
+            width: 100%;
+            padding: 25px 30px !important;
+        }
+
+        .formu{
+            padding: 0 !important;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .sel{
+            padding: 0;
+        }
     }
 </style>
