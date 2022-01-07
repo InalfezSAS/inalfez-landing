@@ -15,23 +15,23 @@
       </div>
       <div class="swiper personal">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <a :href="item.whatsApp" class="swiper-slide "  v-for="item in workers" :key="item.id" >
             <div class="team-card d-flex flex-column">
-              <div class="team-img d-flex justify-content-center">
-                <img class="foto" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" alt="">
+              <div class="team-img d-flex justify-content-center">  
+                <img class="foto" :src="item.photo" alt="">
               </div>
               <div
                 class="team-info d-flex flex-column align-items-center"
               >
                 <p class="team-title" >
-                  <strong>Gabriel Alferez</strong> - CEO INALFEZ S.A.S
+                  <strong>{{item.name}}</strong> - {{item.position}}
                 </p>
                 <p class="frase">
-                  “Amo mi trabajo como si fuera mi vida”
+                  "{{item.sentence}}"
                 </p>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="d-none d-md-block">
           <div class="swiper-button-next"></div>
@@ -44,6 +44,30 @@
 <script>
 export default {
   name: "Equipo",
+
+  data(){
+    return{
+      workers:[
+        {
+          id:0,
+          name:"Maria del Pilar Niño",
+          photo:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1641515140/245142783_1283135052167232_1411206711658320767_n_g3xpw0.jpg",
+          position:"Asesora de ventas",
+          sentence:"Apasionada por la vida",
+          whatsApp:"https://wa.link/rdfp99"
+        },
+         {
+          id:1,
+          name:"Barbara Manrique",
+          photo:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1641515140/WhatsApp_Image_2021-12-22_at_4.49.37_PM_fg3vrd.jpg",
+          position:"Asesora de ventas",
+          sentence:"Me encanta superarme",
+          whatsApp:"https://wa.link/37jfgy"
+        },
+
+      ]
+    }
+  },
 
   mounted() {
     const Swiper = window.Swiper;
@@ -76,6 +100,11 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 @media (max-width: 1600px) {

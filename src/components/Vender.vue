@@ -1,13 +1,13 @@
 <template>
 <div class="row container justify-content-center align-items-center vender" >
-    <div class="d-flex col-5 flex-column px-4">
+    <div class="d-flex col-lg-5 col-auto flex-column px-4">
         <h3>¿Estás entusiasmado y quieres comprar ya?</h3>
         <p>Da clic en el siguiente botón e inicia un chat con una
         asesora de ventas para que te guíe en el proceso de compra
         del lote. <span class="sub"> Construye tu futuro ahora</span></p>
     </div>
     <div class="d-flex col-auto">
-        <a class="ayuda" href="#">Necesito asesoría</a>
+        <a class="ayuda" href="https://wa.link/52o2i7" target="a_blank">Necesito asesoría</a>
     </div>
 </div>
 </template>
@@ -83,6 +83,17 @@ box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.288);
 transition: all 500ms ease;
 position: relative;
 transform: translateY(-30%);
+}
+
+@media (max-width:992px) {
+    .ayuda{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .vender{
+        margin-top: 75px;
+    }
 }
 
 </style> 
