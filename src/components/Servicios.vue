@@ -87,7 +87,7 @@ export default {
       slidesPerView: 1,
       loop: true,
       autoplay: {
-        delay: 1500,
+        delay: 3000,
         disableOnInteraction: false,
       },
       navigation: {
