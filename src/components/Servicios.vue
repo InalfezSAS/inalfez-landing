@@ -68,9 +68,57 @@ export default {
           id: 6,
           image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1641503117/34_zgyahc.jpg",
         },
-{
+        {
           id: 7,
           image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1641503118/36_mjvqo8.jpg",
+        },
+        {
+          id: 8,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690645/WhatsApp_Image_2022-01-13_at_11.14.46_AM_4_umpi2o.jpg",
+        },
+        {
+          id: 9,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690645/WhatsApp_Image_2022-01-13_at_11.14.47_AM_1_bcfme8.jpg",
+        },
+        {
+          id: 10,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690645/WhatsApp_Image_2022-01-13_at_11.14.47_AM_kkbctr.jpg",
+        },
+        {
+          id: 11,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690645/WhatsApp_Image_2022-01-13_at_11.14.47_AM_2_flqcjl.jpg",
+        },
+        {
+          id: 12,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690645/WhatsApp_Image_2022-01-13_at_11.14.46_AM_ikif1a.jpg",
+        },
+        {
+          id: 13,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690646/WhatsApp_Image_2022-01-13_at_11.14.45_AM_1_zi13hm.jpg",
+        },
+        {
+          id: 14,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690646/WhatsApp_Image_2022-01-13_at_11.14.46_AM_2_zhztbn.jpg",
+        },
+        {
+          id: 15,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690646/WhatsApp_Image_2022-01-13_at_11.14.45_AM_2_l7r3j5.jpg",
+        },
+        {
+          id: 15,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690646/WhatsApp_Image_2022-01-13_at_11.14.46_AM_3_syl7ts.jpg",
+        },
+        {
+          id: 16,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690646/WhatsApp_Image_2022-01-13_at_11.14.45_AM_lqprno.jpg",
+        },
+        {
+          id: 16,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690646/WhatsApp_Image_2022-01-13_at_11.14.45_AM_3_lp7qor.jpg",
+        },
+        {
+          id: 17,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690647/WhatsApp_Image_2022-01-13_at_11.14.46_AM_1_ucdi1o.jpg",
         },
       ],
 
