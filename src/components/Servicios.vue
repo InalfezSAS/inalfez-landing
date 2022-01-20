@@ -204,7 +204,7 @@ export default {
   color: white;
   position: absolute;
   right: 40px;
-  top: -30px;
+  top: 0px;
   cursor: pointer;
 }
 
