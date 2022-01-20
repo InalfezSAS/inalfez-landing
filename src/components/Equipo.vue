@@ -29,6 +29,9 @@
                 <p class="frase">
                   "{{item.sentence}}"
                 </p>
+                <button class="asesoria">
+                  {{item.boton}}
+                </button>
               </div>
             </div>
           </a>
@@ -54,7 +57,8 @@ export default {
           photo:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1641515140/245142783_1283135052167232_1411206711658320767_n_g3xpw0.jpg",
           position:"Asesora de ventas",
           sentence:"Apasionada por la vida",
-          whatsApp:"https://wa.link/rdfp99"
+          whatsApp:"https://wa.link/rdfp99",
+          boton:'Quiero asesoría'
         },
          {
           id:1,
@@ -62,7 +66,8 @@ export default {
           photo:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1641515140/WhatsApp_Image_2021-12-22_at_4.49.37_PM_fg3vrd.jpg",
           position:"Asesora de ventas",
           sentence:"Me encanta superarme",
-          whatsApp:"https://wa.link/37jfgy"
+          whatsApp:"https://wa.link/37jfgy",
+          boton:'Quiero asesoría'
         },
 
       ]
@@ -100,6 +105,19 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.asesoria{
+    padding: 10px 30px;
+    margin: 10px 0;
+    background: #70C217;
+    font-size: 14px;
+    color: white;
+    border-style: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
 }
 
 a{

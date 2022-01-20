@@ -1,5 +1,5 @@
 <template >
-  <div>
+  <a href="https://www.facebook.com/inversionesinalfezsas" target="_blank">
     <svg
       width="25"
       height="24"
@@ -12,7 +12,7 @@
         fill="white"
       />
     </svg>
-  </div>
+  </a>
 </template>
 <script>
 export default {

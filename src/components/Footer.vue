@@ -9,7 +9,7 @@
         <div class="info-container text-center text-lg-end">
           <div class="mb-5">
             <h1 class="fw-bold text-white mb-3">Dirección</h1>
-            <p class="text-white mb-0">Calle 12 # 18-91</p>
+            <p class="text-white mb-0">Oficina: Calle 12 # 18-91</p>
             <p class="text-white">Centro EDS Terpel del centro de Cumaral</p>
           </div>
           <div class="mb-5">
