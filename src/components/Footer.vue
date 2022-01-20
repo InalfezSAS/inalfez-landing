@@ -3,7 +3,7 @@
     <div class="footer container ">
       <div class="footer-content d-flex flex-column d-lg-grid">
         <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d497.3432358807377!2d-73.48691360460823!3d4.269559738516057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1634872896044!5m2!1ses!2sco" width="80%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.6866548950699!2d-73.48735621195397!3d4.269418437188554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3fd5649f9e8a63%3A0x719179beecf1089b!2sinversiones%20Inalfez%20s.a.s!5e0!3m2!1ses!2sco!4v1642699473516!5m2!1ses!2sco" width="80%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="info-container text-center text-lg-end">
