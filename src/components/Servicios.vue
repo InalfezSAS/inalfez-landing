@@ -120,6 +120,10 @@ export default {
           id: 17,
           image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642690647/WhatsApp_Image_2022-01-13_at_11.14.46_AM_1_ucdi1o.jpg",
         },
+        {
+          id: 18,
+          image: "https://res.cloudinary.com/ddegh9xqy/image/upload/v1642692071/IMAGEN_INALFEZ_Mesa_de_trabajo_1_1_vv8lrk.jpg",
+        },
       ],
 
       currentInfo:{
