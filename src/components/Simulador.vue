@@ -283,7 +283,7 @@ export default {
 
     computed:{
         completo(){
-            return "https://wa.me/573214661647/?text=Hola mi nombre es " + this.nombre + ". Estoy interesado/a en un lote tipo " + this.viewLote + ", cuyo valor es" + this.objectLote.valor + ", mi aporte como cuota inicial es de" + this.currentInicial + ", para financiar a  " + this.currentMes + " meses, para contactarme mi correo es " + this.correo + " y mi numero de contacto o whatsApp es " + this.numero
+            return "https://wa.me/573188353111/?text=Hola mi nombre es " + this.nombre + ". Estoy interesado/a en un lote tipo " + this.viewLote + ", cuyo valor es" + this.objectLote.valor + ", mi aporte como cuota inicial es de" + this.currentInicial + ", para financiar a  " + this.currentMes + " meses, para contactarme mi correo es " + this.correo + " y mi numero de contacto o whatsApp es " + this.numero
         }
     }
 
