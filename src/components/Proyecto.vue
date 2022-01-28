@@ -53,11 +53,11 @@ export default {
         {
           id:0,
           titulo:"Nuestro proyecto",
-          parrafo:"INALFEZ S.A.S tiene el gusto de presentarles la URBANIZACIÓN LA RESERVA, ubicada en la zona urbana de Cumaral - Meta y a tan solo cuatro (4) cuadras del parque central. Consiste en 19.5 hectáreas, la cual se compone de 812 lotes distribuidos en 33 manzanas para que construya la casa de sus sueños; esta cuenta con varias zonas verdes deportivas y recreativas ubicadas dentro de la urbanización y con amplias zonas de paisajismo y arborización."
+          parrafo:"INALFEZ S.A.S tiene el gusto de presentarles la URBANIZACIÓN LA RESERVA, ubicada en la zona urbana de Cumaral - Meta y a tan solo cuatro (3) cuadras del parque central. Consiste en 19.5 hectáreas, se compone de 812 lotes distribuidos en 33 manzanas para que construya la casa de sus sueños; esta cuenta con varias zonas verdes deportivas y recreativas ubicadas dentro de la urbanización y con amplias zonas de paisajismo, arborización, calles amplias."
         },
         {id:1,
           titulo:"Urbanización la Reserva",
-          parrafo:"Los lotes cuentan con gran variedad de medidas y valores. La urbanización está dividida en dos (2) zonas: El área comercial y el área residencial todos diseñados para 2 pisos más altillo con terreno acto para 3 pisos. Los lotes se entregan con escrituras públicas e individuales y disponibilidad de servicios públicos (agua, alcantarillado y energía)."
+          parrafo:"Los lotes cuentan con gran variedad de medidas y valores. La urbanización está dividida en dos (2) zonas: El área comercial y el área residencial todos diseñados para 2 pisos más altillo con terreno acto para 3 pisos. Los lotes se entregan con escrituras públicas e individuales y disponibilidad de servicios públicos (agua, alcantarillado y energía, urbanismo completamente terminado para el 2024."
         },
       ]
     }

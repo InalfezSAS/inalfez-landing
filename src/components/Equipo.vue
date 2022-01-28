@@ -54,7 +54,7 @@ export default {
         {
           id:0,
           name:"Maria del Pilar Niño",
-          photo:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1641515140/245142783_1283135052167232_1411206711658320767_n_g3xpw0.jpg",
+          photo:"https://res.cloudinary.com/ddegh9xqy/image/upload/v1643390723/WhatsApp_Image_2022-01-25_at_3.02.54_PM_eamldg.jpg",
           position:"Asesora de ventas",
           sentence:"Apasionada por la vida",
           whatsApp:"https://wa.link/rdfp99",

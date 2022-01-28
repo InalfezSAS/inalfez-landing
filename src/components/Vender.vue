@@ -2,9 +2,7 @@
 <div class="row container justify-content-center align-items-center vender" >
     <div class="d-flex col-lg-5 col-auto flex-column px-4">
         <h3>¿Estás entusiasmado y quieres comprar ya?</h3>
-        <p>Da clic en el siguiente botón e inicia un chat con una
-        asesora de ventas para que te guíe en el proceso de compra
-        del lote. <span class="sub"> Construye tu futuro ahora</span></p>
+        <p>Da clic en el siguiente botón e inicia un chat con una asesora de ventas para que te guíe en el proceso de compra del lote. <br> <span class="sub"> ¡Construye el patrimonio de tu futuro y el de tus seres queridos ahora!</span></p>
     </div>
     <div class="d-flex col-auto">
         <a class="ayuda" href="https://wa.link/52o2i7" target="a_blank">Necesito asesoría</a>
