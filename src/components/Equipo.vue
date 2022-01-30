@@ -11,7 +11,7 @@
           mb-5 mb-md-0
         "
       >
-        <p>Nuestro equipoo</p>
+        <p>Nuestro equipo</p>
       </div>
       <div class="swiper personal">
         <div class="swiper-wrapper">

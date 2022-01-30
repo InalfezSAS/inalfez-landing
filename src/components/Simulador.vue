@@ -2,10 +2,11 @@
     <div class="container" id="simulador">
         <h2 class="titulo">¡Simula tu reserva!</h2>
         <div class="row p-5">
-            <div class="col-lg-6 col-auto d-flex  flex-column padding formu">
-                <input v-model="nombre" class="input" placeholder="Nombre completo" required>
-                <input v-model="correo" class="input" type="email" placeholder="Correo electronico" required>
-                <input v-model="numero" class="input" type="tel"  id="tel" name="tel" placeholder="Número de WhatsApp" required>
+            <form class="col-lg-6 col-auto d-flex  flex-column padding formu" @submit.prevent="onSubmit">
+                <input v-model="nombre" class="input" placeholder="Nombre completo">
+                <!-- <p style="color: red; text-align: start;" v-if="this.alertNombre">Este campo es requerido para simular.</p> -->
+                <input v-model="correo" class="input" type="email" placeholder="Correo electronico">
+                <input v-model="numero" class="input" type="number"  id="tel" name="tel" placeholder="Número de WhatsApp">
 
                 <select  v-model="currentLote"  class="form-select input" placeholder="Lote de interés">
                     <option disabled selected value="">Lote de interés</option>
@@ -31,7 +32,7 @@
                 <div>
                 <button @click="simular" type="button" class="btn btn-primary mt-5">Simular</button>
                 </div>
-            </div>
+            </form>
             <div class="col-lg-6 col-auto d-flex flex-column align-items-start tabla padding">
                 <div class="informacion">
                     <div class="item">
@@ -74,14 +75,18 @@ export default {
     name: 'Simulador',
     data() {
         return {
+            loteInteresStatus: false,
+
             nombre:"",
             correo:"",
             numero: null,
+            currentLote:"",
             meses: '',
+            reserva: '',
+            
             quiero:false,
             cuota:null,
             valorLote:0,
-            reserva: '',
             mensaje:false,
             lotes:[
                 {
@@ -243,7 +248,6 @@ export default {
                     mes:24
                 },
             ],
-            currentLote:"",
             viewLote:"--",
             currentMes:"--",
             currentInicial:"--",
@@ -270,7 +274,15 @@ export default {
             this.currentCuota = (parseInt(this.objectLote.valor) - parseInt(this.currentInicial)) / parseInt(this.currentMes)
             this.objectLote.valor = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.objectLote.valor) 
             this.currentInicial = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.currentInicial) 
-            this.currentCuota = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.currentCuota) 
+            this.currentCuota = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'COP' }).format(this.currentCuota)
+            
+            this.nombre = ""
+            this.correo = ""
+            this.numero = ""
+            this.currentLote = ""
+            this.meses = ""
+            this.reserva = "false"
+            this.cuota = null
         },
 
         //  saveInfo(metros, valor){
@@ -283,7 +295,7 @@ export default {
 
     computed:{
         completo(){
-            return "https://wa.me/573188353111/?text=Hola mi nombre es " + this.nombre + ". Estoy interesado/a en un lote tipo " + this.viewLote + ", cuyo valor es" + this.objectLote.valor + ", mi aporte como cuota inicial es de" + this.currentInicial + ", para financiar a  " + this.currentMes + " meses, para contactarme mi correo es " + this.correo + " y mi numero de contacto o whatsApp es " + this.numero
+            return "https://wa.me/573188353111/?text=Hola mi nombre es " + this.nombre + ". Estoy interesado/a en un lote tipo " + this.viewLote + ", cuyo valor es $" + this.objectLote.valor + ", mi aporte como cuota inicial es de $" + this.currentInicial + ", para financiar a " + this.currentMes + " meses, para contactarme mi correo es " + this.correo + " y mi numero de contacto o whatsApp es " + this.numero
         }
     }
 
