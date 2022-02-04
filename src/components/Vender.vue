@@ -9,16 +9,6 @@
             <a class="ayuda" href="https://wa.link/52o2i7" target="a_blank">Necesito asesoría</a>
         </div>
     </div>
-
-    <div class="row container justify-content-center align-items-center vender" >
-        <div class="d-flex col-lg-5 col-auto flex-column px-4">
-            <h3>¿Quiéres tener un mejor plano de nuestro proyecto?</h3>
-            <p>Da clic en el siguiente botón y comienza a ver la mejor inversión para tu futuro. <br> <span class="sub"> ¡Construye el patrimonio de tu futuro y el de tus seres queridos ahora!</span></p>
-        </div>
-        <div class="d-flex col-auto">
-            <a class="ayuda" href="https://drive.google.com/file/d/1IL7W3OgLz2bVpKDDIVjcFksGwQdlLmB1/view?usp=sharing" target="a_blank">Ver mapa</a>
-        </div>
-    </div>
 </div>
 </template>
 <script>
