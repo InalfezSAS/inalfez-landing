@@ -33,7 +33,7 @@
           <img src="https://res.cloudinary.com/msolutionstech/image/upload/v1626917763/LOGO_BLANCO-02_pori1c.png" alt="logo">
         </div>
         <div class="d-flex align-items-center justify-content-center">
-          <p class="text-white mb-4 mb-lg-0" style="font-size: 12px;">COPYRIGHT INVERSIONES ALFEREZ SAS 2022 - TERMS & CONDITIONS  PRIVACY POLICY</p>
+          <p class="text-white mb-4 mb-lg-0" style="font-size: 12px;">COPYRIGHT INVERSIONES ALFEREZ FERNANDEZ SAS 2022 - TERMS & CONDITIONS  PRIVACY POLICY</p>
         </div>
         <div class="d-flex justify-content-center">
           <img class="d-lg-none me-4" src="https://res.cloudinary.com/msolutionstech/image/upload/v1626917763/LOGO_BLANCO-02_pori1c.png" alt="logo">
