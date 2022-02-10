@@ -74,7 +74,7 @@
                 <p>Da clic en el siguiente botón y comienza a ver la mejor inversión para tu futuro. <br> <span class="sub"> ¡Construye el patrimonio de tu futuro y el de tus seres queridos ahora!</span></p>
             </div>
             <div class="d-flex col-auto">
-                <a class="ayuda" href="https://drive.google.com/file/d/1IL7W3OgLz2bVpKDDIVjcFksGwQdlLmB1/view?usp=sharing" target="a_blank">Ver mapa</a>
+                <a class="ayuda" href="https://drive.google.com/file/d/1cEk3igGqkXH2Ksr9sJ38kvq7-sUYf-sw/view?usp=sharing" target="a_blank">Ver plano</a>
             </div>
         </div>
     </div>
